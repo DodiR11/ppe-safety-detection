@@ -1,3 +1,5 @@
+![PPE Detection Example](images/e2151d626a283ec158d3fd035a80efcf419331ba2d0c3761d79462c1.jpg)
+
 This project uses YOLOv8 to help us detect safety equipment in images and videos.
 
 The main goal is to detect PPE items and identify possible safety violations,such as missing helmets or safety vests
