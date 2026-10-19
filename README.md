@@ -4,7 +4,7 @@ The main goal is to detect PPE items and identify possible safety violations,suc
 
 I trained the model using Google Colab and built a simple web app with Streamlit.
 
-##Demo
+## Demo
 
 The app allows users to upload an image or a video, It then shows the detected objects with bounding boxes. If a helmet or safety vest violation is detected, the app displays a warning.
 
@@ -12,7 +12,7 @@ Videos are processed frame by frame and can be downloaded after being processed.
 
  
 
-##Features
+## Features
 
 - PPE detection using YOLOv8
 
@@ -24,11 +24,11 @@ Videos are processed frame by frame and can be downloaded after being processed.
 
 - Uses smoothing to reduce unstable video alerts
 
-##Dataset
+## Dataset
 
 to train the model i used a PPE dataset from Roboflow(https://universe.roboflow.com/radwans-workspace/ppe-dataset-orfty-trogr)
 
-##Model Training
+## Model Training
 
 for trainig i used YOLOv8n from Ultralytics and trained the model on google colab.
 
@@ -44,7 +44,7 @@ The project main steps:
 
 
 
-##Results
+## Results
 
 The model can detect different PPE items, including helmets and safety vests and also checks for missing helmets and safety vests.For videos, it processes each frame and counts frames where violations are detected.
 
@@ -66,7 +66,7 @@ things I worked on during this project:
 
 - Connecting the trained model to Streamlit
 
-##Limitations
+## Limitations
 
 - The model sometimes makes false predictions.
 
