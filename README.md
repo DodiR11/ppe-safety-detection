@@ -1,4 +1,7 @@
-![PPE Detection Example](images/5fa4ccde598d786e897d94ee8226b2488bed1e02567b6fa48a09a4ec.jpg)
+## Video Demo
+
+[PPE Detection Video](vids/processed_video%20%282%29%20%281%29.mp4)
+
 
 This project uses YOLOv8 to help us detect safety equipment in images and videos.
 
@@ -7,7 +10,7 @@ The main goal is to detect PPE items and identify possible safety violations,suc
 I trained the model using Google Colab and built a simple web app with Streamlit.
 
 ## Demo
-
+![PPE Detection Example](images/5fa4ccde598d786e897d94ee8226b2488bed1e02567b6fa48a09a4ec.jpg)
 The app allows users to upload an image or a video, It then shows the detected objects with bounding boxes. If a helmet or safety vest violation is detected, the app displays a warning.
 
 Videos are processed frame by frame and can be downloaded after being processed.
