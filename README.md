@@ -3,7 +3,7 @@
 
 
 
-![PPE Detection Example](images/5fa4ccde598d786e897d94ee8226b2488bed1e02567b6fa48a09a4ec.jpg)
+![PPE Detection Example](6b5f3ad3fa0f8e001a5c5a05890ac34bbd92b7ae241cda39942cdef5.jpg)
 
 This project uses YOLOv8 to help us detect safety equipment in images and videos.
 
