@@ -33,16 +33,18 @@ def process_video(model, input_path, output_path, conf=0.4):
             detections= extract_detections(r, model)
             violations = detect_violations(detections)
 
-            current = 1 if violations else 0
-            history.append(current)
+            history.append(set(violations))
 
-            stable_violation = sum(history) >= 3
+            stable_violations = [
+                violation
+                for violation in set().union(*history)
+                if sum(violation in frame for frame in history) >= 3
+            ]
 
-            if stable_violation:
+            if stable_violations:
                 violation_frames += 1
-                annotated_frame = annotate_image(r, violations)
-            else:
-                annotated_frame = annotate_image(r, [])
+
+            annotated_frame = annotate_image(r, stable_violations)
 
             annotated_frame= np.array(annotated_frame).astype("uint8")
 
