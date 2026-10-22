@@ -15,8 +15,7 @@ I trained the model using Google Colab and built a simple web app with Streamlit
 ## Demo
 https://github.com/user-attachments/assets/dd199485-76fa-494d-9f29-6b7d48d391a8
 
-The app allows users to upload an image or a video, It then shows the detected objects with bounding boxes. If a helmet or safety vest violation is detected, the app displays a warning.
-
+The app allows users to upload an image or a video, It then shows the detected objects with bounding boxes. If a PPE violation is detected, such as a missing helmet, safety vest, or other required protective equipment, the app displays a warning.
 Videos are processed frame by frame and can be downloaded after being processed.
 
  
@@ -27,7 +26,7 @@ Videos are processed frame by frame and can be downloaded after being processed.
 
 -Supports helmets, gloves, safety shoes,masks, safety vests, and other equipment
 
-- also Checks for missing helmets and safety vests
+-Identifies missing PPE, including helmets, masks, safety vests, and ear protectors.
 
 - Supports images and videos
 
@@ -43,13 +42,13 @@ for trainig i used YOLOv8n from Ultralytics and trained the model on google cola
 
 The project main steps:
 
-1YOLO detects ppe objects in an image or a video frame
+1.YOLO detects ppe objects in an image or a video frame
 
-2The code checks the detected classes for helmet and safety vest violations
+2.The code checks the detected classes for helmet and safety vest violations
 
-3the model adds Bounding boxes and warning messages to the image
+3.the model adds Bounding boxes and warning messages to the image
 
-4Streamlit displays the results
+4.Streamlit displays the results
 
 
 
@@ -80,8 +79,6 @@ things I worked on during this project:
 - The model sometimes makes false predictions.
 
 - It does not check which PPE item belongs to which person
-
-- The violation logic currently focuses on helmets and safety vests
 
 - Detection can be less accurate in poor lighting or when objects are hidden
 
