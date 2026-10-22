@@ -35,13 +35,11 @@ def detect_violations(detections):
         if d["confidence"] < 0.3:
             continue
 
-        if d["class"]  == "Without Helmet":
-            if "No Helmet" not in violations:
-                violations.append("No Helmet")
+       if d["class"] in VIOLATION_CLASSES:
+            violation = d["class"]
 
-        elif d["class"] == "Without Safety Vest":
-            if "No Safety Vest" not in violations:
-                violations.append("No Safety Vest")
+            if violation not in violations:
+                violations.append(violation)
 
     return violations
 
